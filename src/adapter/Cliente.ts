@@ -1,13 +1,13 @@
-import { ITomadaTresPinos } from "./ITomadaTresPinos";
 import { TomadaDoisPinos } from "./TomadaDoisPinos";
 
-export class Cliente implements ITomadaTresPinos{
+export class Cliente{
+    private tomada: TomadaDoisPinos = new TomadaDoisPinos();
+
     constructor() {
-        this.ligar("teste ligar");
+        this.main();
     }
 
-    ligar(energia: string): void {
-        const tomada = new TomadaDoisPinos();
-        tomada.ligar(energia);
+    main(): void {
+        this.tomada.ligar("ativar")
     }
 }

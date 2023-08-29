@@ -4,11 +4,11 @@ exports.Cliente = void 0;
 var TomadaDoisPinos_1 = require("./TomadaDoisPinos");
 var Cliente = /** @class */ (function () {
     function Cliente() {
-        this.ligar("teste ligar");
+        this.tomada = new TomadaDoisPinos_1.TomadaDoisPinos();
+        this.main();
     }
-    Cliente.prototype.ligar = function (energia) {
-        var tomada = new TomadaDoisPinos_1.TomadaDoisPinos();
-        tomada.ligar(energia);
+    Cliente.prototype.main = function () {
+        this.tomada.ligar("ativar");
     };
     return Cliente;
 }());
