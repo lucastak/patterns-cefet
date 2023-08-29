@@ -1,0 +1,1 @@
+{"version":3,"file":"Financeiro.js","sourceRoot":"","sources":["../../src/singleton2/Financeiro.ts"],"names":[],"mappings":";;;AAEA,MAAa,UAAU;IAInB,YAAY,eAAuB,EAAE,kBAA0B;QAC3D,IAAI,CAAC,IAAI,GAAG,eAAe,CAAC;QAC5B,IAAI,CAAC,OAAO,GAAG,kBAAkB,CAAC;IACtC,CAAC;CACJ;AARD,gCAQC"}
