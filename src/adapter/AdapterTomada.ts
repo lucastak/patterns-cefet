@@ -1,8 +1,10 @@
 import { ITomadaTresPinos } from "./ITomadaTresPinos";
+import { TomadaDoisPinos } from "./TomadaDoisPinos";
 
 export class AdapterTomada implements ITomadaTresPinos{
     ligar(energia: string): void {
-        console.log("energia adapter", energia);
+        const tomada = new TomadaDoisPinos();
+        tomada.ligar(energia);
     }
 
 }

@@ -1,13 +1,11 @@
-import { TomadaDoisPinos } from "./TomadaDoisPinos";
+import { ITomadaTresPinos } from "./ITomadaTresPinos";
 
 export class Cliente{
-    private tomada: TomadaDoisPinos = new TomadaDoisPinos();
-
-    constructor() {
-        this.main();
+    constructor(adapter: ITomadaTresPinos) {
+        this.main(adapter);
     }
 
-    main(): void {
-        this.tomada.ligar("ativar")
+    main(adapter: ITomadaTresPinos): void {
+        adapter.ligar("ligar")
     }
 }
