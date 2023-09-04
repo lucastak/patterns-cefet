@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Pedido_1 = require("./Pedido");
+var Produto_1 = require("./Produto");
+var pedido1 = new Pedido_1.Pedido(1);
+pedido1.add(new Produto_1.Produto(1, "produto1", 1, 100));
+pedido1.add(new Produto_1.Produto(2, "produto2", 1, 200));
+pedido1.add(new Produto_1.Produto(3, "produto3", 1, 300));
+var pedido2 = new Pedido_1.Pedido(2);
+pedido2.add(new Produto_1.Produto(5, "produto5", 2, 100));
+pedido2.add(new Produto_1.Produto(4, "produto4", 1, 200));
+pedido2.add(new Produto_1.Produto(6, "produto6", 1, 300));
+var pedido3 = new Pedido_1.Pedido(3);
+pedido3.add(new Produto_1.Produto(7, "produto7", 1, 100));
+pedido3.add(new Produto_1.Produto(8, "produto8", 1, 200));
+pedido2.add(pedido3);
+pedido1.add(pedido2);
+console.log("total", pedido1.precoTotal());
