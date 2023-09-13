@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var BaseDecorator_1 = require("./BaseDecorator");
+var estampacostas_1 = require("./estampacostas");
+var estampafrente_1 = require("./estampafrente");
+var GolaFechada_1 = require("./GolaFechada");
+var MangaLonga_1 = require("./MangaLonga");
+var camisa = new BaseDecorator_1.BaseDecorator();
+console.log('camisa básica - ' + camisa.precoFinal());
+var estfrente = new estampafrente_1.estampafrente(camisa);
+var estcostas = new estampacostas_1.estampacostas(estfrente);
+var manglonga = new MangaLonga_1.mangalonga(estcostas);
+var glfech = new GolaFechada_1.golafechada(manglonga);
+console.log('total: ' + glfech.precoFinal());
