@@ -1,9 +1,9 @@
-import { IBancoDeDados } from "./IBancoDeDados";
+import { iBD } from "./iBD";
 
-export class Cliente {
-    constructor(private bd: IBancoDeDados) {}
+export class cliente {
+    constructor(private bd: iBD) {}
 
-    getVendas() {
+    getTotalVendas(): string {
         return this.bd.getTodasVendas();
     }
 }

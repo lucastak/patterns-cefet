@@ -1,30 +1,26 @@
-import { IValor } from "./IValor";
+import { iValor } from './iValor'
 
-export class Pedido implements IValor {
-    id: number;
-    private lista: IValor[] = [];
+export class Pedido implements iValor {
+    private listItem: iValor[] = [];
+    nome: string = '';
     
-    constructor(idPedido: number) {
-        this.id = idPedido;
+    valorTotal(): number {
+        let vValor = 0;
+        this.listItem.forEach(item => {
+            vValor += item.valorTotal();
+        });
+        return vValor;
     }
 
-    public add(item: IValor): void{
-        this.lista.push(item);
+    addItem(item: iValor): void {
+        this.listItem.push(item);
     }
 
-    public remove(item: IValor): void{
-        let index = this.lista.indexOf(item);
-        this.lista.slice(index, 1);
+    imprimir(): string {
+        let vImprimir: string = this.nome + ': ' + this.valorTotal() + '\n';
+        this.listItem.forEach(item => {
+            vImprimir += item.imprimir() + '\n';
+        });
+        return vImprimir;
     }
-
-    public precoTotal(): number {
-        let valorTotal = 0;
-
-        this.lista.forEach(item => {
-            valorTotal += item.precoTotal();
-        })
-
-        return valorTotal;
-    }
-
 }

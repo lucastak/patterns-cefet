@@ -1,7 +1,6 @@
-import { AdapterTomada } from "./AdapterTomada";
+export class TomadaDoisPinos {
 
-export class TomadaDoisPinos extends AdapterTomada{
-    ligar(energia: string): void {
-        console.log("energia TomadaDoisPinos", energia);
+    ligar(energiaXML: string): void {
+        console.log(energiaXML);
     }
 }

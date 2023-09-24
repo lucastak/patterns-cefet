@@ -1,4 +1,4 @@
-export interface IValor {
-    id: number;
-    precoTotal(): number;
+export interface iValor {
+    valorTotal(): number;
+    imprimir(): string;
 }

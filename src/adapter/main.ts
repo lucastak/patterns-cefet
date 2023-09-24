@@ -1,5 +1,8 @@
-import { AdapterTomada } from "./AdapterTomada";
-import { Cliente } from "./Cliente";
-const adapter = new AdapterTomada();
+import { adaptertomada } from "./adpaptertomada";
+import { cliente } from "./cliente";
 
-new Cliente(adapter);
+
+let adapter: adaptertomada = new adaptertomada();
+let cli: cliente = new cliente(adapter);
+cli.ligarTomada();
+

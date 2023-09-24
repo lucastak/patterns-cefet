@@ -1,3 +1,3 @@
-export interface ITomadaTresPinos{
-    ligar(energia: string): void;
+export interface iTomadaTresPinos {
+    ligar(energiaJSON: string): void;
 }

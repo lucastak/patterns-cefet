@@ -1,9 +1,11 @@
 import { BaseDecorator } from "./BaseDecorator";
 
 export class golafechada extends BaseDecorator {
+    private base: BaseDecorator;
 
-    constructor(private base: BaseDecorator) {
-        super();        
+    constructor(classebase: BaseDecorator) {
+        super();
+        this.base = classebase;        
     }
 
     precoFinal(): number {

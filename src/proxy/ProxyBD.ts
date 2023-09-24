@@ -1,17 +1,16 @@
 import { BD } from "./BD";
-import { IBancoDeDados } from "./IBancoDeDados";
+import { iBD } from "./iBD";
 
-export class ProxyBD implements IBancoDeDados {
-    private pedidosJsonFormat: string | null = null;
-    
+export class ProxyBD implements iBD {
+    private todasVendas: string = '';
+
     getTodasVendas(): string {
-        if (this.pedidosJsonFormat == null) {
-            const bd = new BD()
-            this.pedidosJsonFormat = bd.getTodasVendas();
-        }     
-        
-        return this.pedidosJsonFormat;
-    }
+        if (this.todasVendas == '') {
+            console.log('chamou proxy');
+            let bd: BD = new BD();
+            this.todasVendas = bd.getTodasVendas();
+        }
 
-    
+        return this.todasVendas;
+    }
 }
