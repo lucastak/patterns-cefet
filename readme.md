@@ -1,4 +1,6 @@
-# Projeto com estrutura base e com exemplos de aplicacão de patterns
+# Projeto com estrutura base e com exemplos de aplicações de patterns.
+Esse projeto já está com uma config base para iniciar as aulas, basta ter o Node no computador.
+
 ## para transformar ts para js - npx tsc arquivo
 
 - Entre na pasta src e na pasta do pattern
