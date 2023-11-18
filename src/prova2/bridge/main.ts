@@ -12,6 +12,8 @@ const plotter: Impressao = new Ploter();
 
 const impressaoAutomatizadaPB: AbstracaoImpressora = new ImpressaoAutomatizada(impressoraPB);
 const impressaoUsuarioColorida: AbstracaoImpressora = new ImpressaoUsuario(impressoraColorida, "Cabeçalho personalizado");
+const impressaoPlotter: AbstracaoImpressora = new ImpressaoAutomatizada(plotter);
 
 impressaoAutomatizadaPB.imprimir("Documento automatizado");
 impressaoUsuarioColorida.imprimir("Documento do usuário");
+impressaoPlotter.imprimir("impressao pelo plotter");
