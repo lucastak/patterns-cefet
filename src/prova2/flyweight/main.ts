@@ -7,11 +7,12 @@ function criarCasa(tipo: string): void {
   casaFlyweight.exibir(tipo);
 }
 
-// Criação de várias casas
+criarCasa("colonial");
 criarCasa("colonial");
 criarCasa("moderna");
 criarCasa("de pedra");
 criarCasa("gotica");
+criarCasa("viking");
 criarCasa("viking");
 
 console.log(`Quantidade total de tipos de casas criadas: ${casaFlyweightFactory.obterQuantidadeCasas()}`);
